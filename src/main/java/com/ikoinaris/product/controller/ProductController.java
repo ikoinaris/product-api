@@ -15,6 +15,11 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
+    @GetMapping("/docker-test")
+    public String getDocker(){
+        return "Docker Test run successfully!";
+    }
+
     @GetMapping("/products")
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Product> getAllProducts() {
